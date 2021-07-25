@@ -16,7 +16,7 @@ pipeline {
         AWS_S3_BUCKET = 'forge-aws-us-n-virginia'
         AWS_EB_APP_NAME = 'zipcodecheckproject'
         AWS_EB_ENVIRONMENT = 'Zipcodecheckproject-env.eba-u7wuhppm.eu-central-1.elasticbeanstalk.com'
-        AWS_EB_APP_VERSION = "${BUILD_ID}"
+        AWS_EB_APP_VERSION = "${env.BUILD_ID}"
     } 
     stages {
         stage("build") {
