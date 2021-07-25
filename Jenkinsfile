@@ -21,6 +21,7 @@ pipeline {
     stages {
         stage("build") {
             steps {
+              echo 'Now Archiving... ${env.BUILD_ID}'
                 sh 'mvn clean install'
               
             }
