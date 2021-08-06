@@ -8,7 +8,7 @@ pipeline {
                 echo 'deploying...'
             }
           post {
-                always { 
+                always {
 
                     jiraSendDeploymentInfo site: 'nsurendran1991.atlassian.net', environmentId: 'prod', environmentName: 'prod', environmentType: 'production'
 
