@@ -4,6 +4,21 @@ pipeline {
     stages {      
 
         stage("deploy") {
+          
+      stage("build") {
+            steps {
+                echo 'deploying...'
+            }
+
+          post {
+                always { 
+
+                    jiraSendBuildInfo site: 'nsurendran1991.atlassian.net'
+
+                }
+            }
+            
+      }
             steps {
                 echo 'deploying...'
             }
